@@ -39,7 +39,17 @@ public class DemoOrgSmall {
 		em.addEmployee(dev2);
 
 		//TODO: try out your recursive methods from the OrganigramHandler
-		//...
+		String chainCeo = OrganigramHandler.getChainOfCommand(ceo);
+		System.out.println("chainCeo = " + chainCeo);
+
+		String chainCto = OrganigramHandler.getChainOfCommand(cto);
+		System.out.println("chainCto = " + chainCto);
+
+		String chainDev2 = OrganigramHandler.getChainOfCommand(dev2);
+		System.out.println("chainDev2 = " + chainDev2);
+
+		String ceoHierarchy = OrganigramHandler.processHierarchy(ceo);
+		System.out.println(ceoHierarchy);
 
 	}
 
