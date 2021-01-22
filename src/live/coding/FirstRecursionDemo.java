@@ -12,11 +12,11 @@ public class FirstRecursionDemo {
   }
 
   public static int calcSumRecursive(int n) {
-    //???base case, recursion start
+    //base case
     if(n == 0) {
       return 0;
     }
-    //??? recursion step
+    //recursion step
     int sum = calcSumRecursive(n - 1) + n;
     return sum;
   }
@@ -27,6 +27,5 @@ public class FirstRecursionDemo {
     callingMyself(text);
     //...
   }
-
 
 }
