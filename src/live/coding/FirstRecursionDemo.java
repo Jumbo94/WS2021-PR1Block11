@@ -9,6 +9,22 @@ public class FirstRecursionDemo {
     int sumResult = calcSumRecursive(3);
     System.out.println(sumResult);
 
+    int fibResult = fibonacci(8);
+    System.out.println(fibResult);
+
+    fibResult = fibonacci(40);
+    System.out.println(fibResult);
+
+  }
+
+  public static int fibonacci(int n) {
+    //base case
+    if(n == 1 || n == 2) {
+      return 1;
+    }
+    //recursion step
+    int fib = fibonacci(n-1) + fibonacci(n-2);
+    return fib;
   }
 
   public static int calcSumRecursive(int n) {
