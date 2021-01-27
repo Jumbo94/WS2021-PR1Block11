@@ -28,11 +28,12 @@ public class Folder extends FSEntry {
 
     @Override
     public void print() {
-        System.out.println(getName() + " " + entries.size() + " included entries, total Size: " + getSize()) ;
+        System.out.println(getName() + " > total Size: " + getSize());
     }
 
+    // muss auch in die Basisklasse FSEntry, als abstract => Damit auch bei File implementiert ist
     public void print(String indent) {
-        System.out.println(getName() + " " + entries.size() + " included entries, total Size: " + getSize()) ;
+        System.out.println(getName() + " > total Size: " + getSize());
     }
 
     public ArrayList<FSEntry> findEntries(String name) {
