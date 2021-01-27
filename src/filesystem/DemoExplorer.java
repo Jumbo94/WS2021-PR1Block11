@@ -39,7 +39,9 @@ public class DemoExplorer {
         root.addEntry(subdir2);
 
 
-
+        System.out.println("root.getSize() = " + root.getSize());
+        System.out.println("textFile3 = " + textFile3.getSize());
+        root.print();
 
     }
 }

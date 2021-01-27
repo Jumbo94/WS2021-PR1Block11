@@ -23,6 +23,6 @@ public class Folder extends FSEntry {
 
     @Override
     public void print() {
-        System.out.println(getName() + " " + entries.size() + " included files") ;
+        System.out.println(getName() + " " + entries.size() + " included entries") ;
     }
 }
