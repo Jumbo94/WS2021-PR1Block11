@@ -18,6 +18,11 @@ public class File extends FSEntry {
     }
 
     @Override
+    public void print(String indent) {
+        System.out.println(indent + getName() + " : " + size + "kB");
+    }
+
+    @Override
     public int getSize() {
         return size;
     }

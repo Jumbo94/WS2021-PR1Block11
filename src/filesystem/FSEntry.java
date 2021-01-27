@@ -14,4 +14,6 @@ public abstract class FSEntry {
     public String getName() {
         return name;
     }
+
+    public abstract void print(String indent);
 }

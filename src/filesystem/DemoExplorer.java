@@ -46,7 +46,7 @@ public class DemoExplorer {
         System.out.println("subdir1 = " + subdir1.getSize());
 
         textFile2.print();
-        root.print();
+        root.print("");
 
                 /*
         root : total Size: 2802
