@@ -41,7 +41,26 @@ public class DemoExplorer {
 
         System.out.println("root.getSize() = " + root.getSize());
         System.out.println("textFile3 = " + textFile3.getSize());
+
+        System.out.println("root.getSize() = " + root.getSize());
+        System.out.println("subdir1 = " + subdir1.getSize());
+
+        textFile2.print();
         root.print();
+
+                /*
+        root : total Size: 2802
+        subdir1 : total Size: xx
+        subdir1_sub
+        textFile3 : 50kB
+        pictureFile3 : 50kB
+        textFile2 : 50kB
+        textFile1 : 50kB
+        subdir2
+        pictureFile1 : 50kB
+        pictureFile2 : 50kB
+         */
+
 
     }
 }

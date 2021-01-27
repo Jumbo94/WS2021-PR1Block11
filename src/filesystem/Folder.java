@@ -18,11 +18,20 @@ public class Folder extends FSEntry {
 
     @Override
     public int getSize() {
-        return 0;
+        int sum = 0;
+        for (FSEntry entry: entries) {
+            sum = sum + entry.getSize();
+        }
+
+        return sum;
     }
 
     @Override
     public void print() {
-        System.out.println(getName() + " " + entries.size() + " included entries") ;
+        System.out.println(getName() + " " + entries.size() + " included entries, total Size: " + getSize()) ;
+    }
+
+    public void print(String indent) {
+        System.out.println(getName() + " " + entries.size() + " included entries, total Size: " + getSize()) ;
     }
 }
