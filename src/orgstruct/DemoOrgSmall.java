@@ -51,6 +51,9 @@ public class DemoOrgSmall {
 		String ceoHierarchy = OrganigramHandler.processHierarchy(ceo);
 		System.out.println(ceoHierarchy);
 
+		System.out.println("OrganigramHandler.processHierarchy(ceo, \"\") = \n"
+				+ OrganigramHandler.processHierarchy(ceo, " "));
+
 	}
 
 }
