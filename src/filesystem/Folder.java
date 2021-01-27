@@ -34,4 +34,11 @@ public class Folder extends FSEntry {
     public void print(String indent) {
         System.out.println(getName() + " " + entries.size() + " included entries, total Size: " + getSize()) ;
     }
+
+    public ArrayList<FSEntry> findEntries(String name) {
+        // TODO: Retourniert alle Einträge die einen bestimmten Namen enthalten
+        String demo = "abcde";
+        demo.contains("bc"); // true
+        return null;
+    }
 }
