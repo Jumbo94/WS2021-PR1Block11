@@ -16,6 +16,11 @@ public class DemoPalindrom {
         if (text.length() <= 1)
             return true;
 
+        if (!Character.isAlphabetic(text.charAt(0)))
+            return isPalindrom(text.substring(1));
+        if (!Character.isAlphabetic(text.charAt(text.length() - 1)))
+            return isPalindrom(text.substring(0, text.length() - 1));
+
         if (text.charAt(0) == text.charAt(text.length()-1)){
             // geht's weiter
             return isPalindrom(text.substring(1, text.length() - 1));
