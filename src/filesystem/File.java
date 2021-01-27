@@ -1,5 +1,7 @@
 package filesystem;
 
+import java.util.ArrayList;
+
 public class File extends FSEntry {
 
     private String extension;
@@ -23,6 +25,16 @@ public class File extends FSEntry {
     }
 
     @Override
+    public ArrayList<FSEntry> findEntries(String name) {
+        ArrayList<FSEntry> result = new ArrayList<>();
+
+        if (getName().contains(name))
+            result.add(this);
+
+        return result;
+    }
+
+    @Override
     public int getSize() {
         return size;
     }
@@ -31,4 +43,6 @@ public class File extends FSEntry {
     public void print() {
         System.out.println(getName() + " : " + size + "kB");
     }
+
+
 }

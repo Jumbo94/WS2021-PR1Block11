@@ -44,8 +44,22 @@ public class Folder extends FSEntry {
 
     public ArrayList<FSEntry> findEntries(String name) {
         // TODO: Retourniert alle Einträge die einen bestimmten Namen enthalten
-        String demo = "abcde";
-        demo.contains("bc"); // true
-        return null;
+        ArrayList<FSEntry> results = new ArrayList<>();
+        for (FSEntry entry : entries) {
+
+            ArrayList<FSEntry> resultOfEntry = entry.findEntries(name);
+
+            // alle Elemente in Ergebnisliste aufnehmen
+            /*for (FSEntry newElement :resultOfEntry) {
+                results.add(newElement);
+            }*/
+            results.addAll(resultOfEntry);
+        }
+
+        // Wenn der eigene Ordnername dem gesuchten entspricht, dann wird auch der Ordner aufgenommen
+        if (getName().contains(name))
+            results.add(this);
+
+        return results;
     }
 }

@@ -1,5 +1,7 @@
 package filesystem;
 
+import java.util.ArrayList;
+
 public abstract class FSEntry {
     protected String name;
 
@@ -16,4 +18,6 @@ public abstract class FSEntry {
     }
 
     public abstract void print(String indent);
+
+    public abstract ArrayList<FSEntry> findEntries(String name);
 }

@@ -1,5 +1,7 @@
 package filesystem;
 
+import java.util.ArrayList;
+
 public class DemoExplorer {
     public static void main(String[] args) {
 
@@ -61,6 +63,21 @@ public class DemoExplorer {
         pictureFile2 : 50kB
          */
 
+        System.out.println("\"demobild1.png\".contains(\"demobild\") = " + "demobild1.png".contains("demobild"));
 
+        System.out.println("Searching for demobild");
+        ArrayList<FSEntry> searchResults = root.findEntries("demobild");
+        System.out.println("found entries with demobild: " + searchResults.size());
+        for (FSEntry sr : searchResults) {
+            System.out.println("sr.getName() = " + sr.getName());
+        }
+
+
+        System.out.println("Searching for dir");
+        searchResults = root.findEntries("dir");
+        System.out.println("found entries with dir: " + searchResults.size());
+        for (FSEntry sr : searchResults) {
+            System.out.println("sr.getName() = " + sr.getName());
+        }
     }
 }
